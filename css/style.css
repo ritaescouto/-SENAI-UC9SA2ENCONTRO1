@@ -4,10 +4,6 @@
     padding: 0;
     box-sizing: border-box; 
 }
-header{
-    background-color: #212D40;
-    height: 90px;
-}
 .container-grid{
     width: 1200px;
     height: 100%;
@@ -15,6 +11,10 @@ header{
     display: flex;
     justify-content: space-between; 
     align-items: center;
+}
+header{
+    background-color: #212D40;
+    height: 90px;
 }
 .menu{
     width: 660px;
@@ -28,22 +28,24 @@ header{
     font-family: 'Roboto',sans-serif;
     font-size: 20px; 
 }
+.barras{
+    width: 50px;
+    display: none; 
+}
+
 .banner{
     background-image: url(../img/banner.png);
     height: 400px;
     background-repeat: no-repeat;
-    /* background-repeat: no-repeat; */
-    background-size: 945px 400px;   
-    /* background-size: cover; */
-    /* background-size: 900px 400px;   */
-    /* background-repeat: none; */
+    /* background-size: 945px 400px;    */
+    background-size: 1350px 400px; 
 }
 .game{
     height: 400px;
     background-image: url(../img/game.png);
     background-repeat: no-repeat;
     background-size: 1400px 400px;
-    background-size: cover;
+    /* background-size: cover; */
 }
 .texto-game{
     color: white;
@@ -64,7 +66,6 @@ header{
     font-size: 25px;
 }
 .texto-game a{
-     /* margin-top: 10px; */
     background-color: rgb(103, 72, 160);
     color: white;
     text-decoration: none;
@@ -86,13 +87,12 @@ header{
 .jogos img{
     width: 150px;
 }
+
 .secao-banner2{
     background-image: url(../img/fundo.png);
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
-    /* height: 350px;
-    background-size: 945px 350px;    */
+    background-position: center;   
 }
 .texto-banner2 h2{
     font-family: 'Titillium Web', sans-serif;
@@ -107,13 +107,67 @@ header{
     font-size: 40px;
     font-weight: bold;
 }
-.barras{
-    width: 50px;
-    display: none; 
+
+footer{
+    background-color: #212D40;
+}   
+.rodape{
+    display: flex;
+    justify-content: space-between;
+    padding: 16px;
 }
-.posiccionamento-header{
-    position:relative;
+.links{
+    color: white;
 }
+.links h2{
+    font-size: 24px;
+}
+.links a{
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+.links-footer{
+    display: flex;
+    justify-content: space-between;
+    width: 350px;
+}
+.logo-rodape{
+    width: 250px;
+    height: 150px;
+}
+.sociais h2{
+    color: white;
+    font-size: 14px;
+    margin-bottom: 10px;
+    margin-top: 25px;
+}
+.sociais form{
+    display: flex;
+    margin-bottom: 10px ;
+}
+.sociais input[type="email"]{
+    height: 37px;
+    width: 195px;
+}
+.sociais input[type="email"]::placeholder{
+    color: B8B3B3;
+    font-weight: bold;
+}
+button{
+    width: 156px;
+    color: white;
+    background-color: #001F70;
+    border: none;
+    font-size: 18px;
+}
+.siga-nos{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
 @media screen and (max-width: 1200px){
     .container-grid{
         width: 90%;   
@@ -124,7 +178,10 @@ header{
     .logo{
         width: 180px;
     }
-}
+
+    .banner{  
+        background-size: 1350px 400px;   
+    }}
 @media screen and (max-width: 768px){
     h1{
         color: blue;
@@ -141,6 +198,13 @@ header{
         top: 0;
         right: 60px;
     }
+    .menu a{
+        text-align: center;
+        padding: 15px;
+    }
+    .posiccionamento-header{
+        position: relative;
+    } 
     .banner{  
         background-size: 768px 400px;   
     }
