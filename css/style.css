@@ -12,15 +12,18 @@
     justify-content: space-between; 
     align-items: center;
 }
+
 header{
     background-color: #212D40;
     height: 90px;
 }
+
 .menu{
     width: 660px;
     display: flex;
     justify-content: space-between;
 }
+
 .menu a{
     color: white;
     text-decoration: none;
@@ -28,18 +31,38 @@ header{
     font-family: 'Roboto',sans-serif;
     font-size: 20px; 
 }
+
 .barras{
     width: 50px;
     display: none; 
 }
 
-.banner{
+.bannerfixoM{
+    display:none;
+}
+
+.bannerfixoP{
+    display:none;
+}
+
+/* Meu Banner anterior que foi substituido pelo Carrosel */
+/* .banner{
     background-image: url(../img/banner.png);
     height: 400px;
     background-repeat: no-repeat;
-    /* background-size: 945px 400px;    */
-    background-size: 1350px 400px; 
+    background-size: 1350px 400px;  
+} */
+
+
+/* Como utilizar Carrosel */
+#carrosel img{
+    display: none;
+} 
+
+.banner-ativo{
+    display: flex;
 }
+
 .game{
     height: 400px;
     background-image: url(../img/game.png);
@@ -47,17 +70,21 @@ header{
     background-size: 1400px 400px;
     /* background-size: cover; */
 }
+
 .texto-game{
     color: white;
 }
+
 .posicao-texto{
     justify-content: flex-end;
 }
+
 .texto-game h1{
     font-family: 'Titillium Web', sans-serif;
     font-size: 80px;
     font-weight: bold;
 }
+
 .texto-game{
     width: 495px;
     color: white;
@@ -65,6 +92,7 @@ header{
     font-family: 'Roboto',sans-serif;
     font-size: 25px;
 }
+
 .texto-game a{
     background-color: rgb(103, 72, 160);
     color: white;
@@ -73,17 +101,22 @@ header{
     padding: 15px;
     border-radius: 5px;
 }
+
 .texto-game p{
     margin-bottom: 50px;
 }
+
 .secao-jogos{
     background-color: #212D40;
+    display: flex;
 }
+
 .jogos{
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
+
 .jogos img{
     width: 150px;
 }
@@ -94,11 +127,13 @@ header{
     background-size: cover;
     background-position: center;   
 }
+
 .texto-banner2 h2{
     font-family: 'Titillium Web', sans-serif;
     font-size: 40px;
     font-weight: bold;
 }
+
 .texto-banner2{
     color:white;
     display: flex;
@@ -110,50 +145,62 @@ header{
 
 footer{
     background-color: #212D40;
+    display: flex;
 }   
+
 .rodape{
     display: flex;
     justify-content: space-between;
     padding: 16px;
 }
+
 .links{
     color: white;
 }
+
 .links h2{
     font-size: 24px;
 }
+
 .links a{
     color: white;
     text-decoration: none;
     font-size: 14px;
 }
+
 .links-footer{
     display: flex;
     justify-content: space-between;
     width: 350px;
 }
+
 .logo-rodape{
     width: 250px;
     height: 150px;
 }
+
 .sociais h2{
     color: white;
     font-size: 14px;
     margin-bottom: 10px;
     margin-top: 25px;
 }
+
 .sociais form{
     display: flex;
     margin-bottom: 10px ;
 }
+
 .sociais input[type="email"]{
     height: 37px;
     width: 195px;
 }
+
 .sociais input[type="email"]::placeholder{
     color: B8B3B3;
     font-weight: bold;
 }
+
 button{
     width: 156px;
     color: white;
@@ -161,6 +208,7 @@ button{
     border: none;
     font-size: 18px;
 }
+
 .siga-nos{
     display: flex;
     align-items: center;
@@ -181,7 +229,9 @@ button{
 
     .banner{  
         background-size: 1350px 400px;   
-    }}
+    }
+}
+
 @media screen and (max-width: 768px){
     h1{
         color: blue;
@@ -205,8 +255,59 @@ button{
     .posiccionamento-header{
         position: relative;
     } 
-    .banner{  
-        background-size: 768px 400px;   
+    /* .banner{  
+        background-size: 768px 400px;    
+    } */
+    .menu-ativo{
+        display: flex;
+    }   
+
+    .joistick {
+        display: none;
+    }
+
+    .secao-jogos{
+        display: none;
+    }
+
+    /* .logo-rodape{
+        display: none;
+        width: 150px;
+        height: 150px; 
+    } */
+
+    
+    .siga-nos{
+        display: none;
+    }
+      
+    .sociais h2{
+        display: none;
+    }
+
+    .sociais form{
+        display: none;
+    }
+
+    .links-footer{
+        font-size: 14px;
+    }
+
+    .carrosel{
+        display: none;
+    }
+
+    .bannerfixoM{
+        display: block;
     }
 }
 
+@media screen and (max-width: 320px){
+    .bannerfixoM{
+        display: none;
+    }
+    .bannerfixoP{
+        display: block;
+    }
+
+}
