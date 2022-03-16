@@ -18,6 +18,14 @@ header{
     height: 90px;
 }
 
+.formulario{
+    box-sizing: border-box;
+    background-color: #212D40;
+    height: 800px;
+    color: white;
+    align-items: center;
+}
+
 .menu{
     width: 660px;
     display: flex;
@@ -31,6 +39,7 @@ header{
     font-family: 'Roboto',sans-serif;
     font-size: 20px; 
 }
+
 
 .barras{
     width: 50px;
@@ -179,6 +188,10 @@ footer{
     height: 150px;
 }
 
+.lj{
+    display: none;
+}
+
 .sociais h2{
     color: white;
     font-size: 14px;
@@ -220,7 +233,11 @@ button{
     .container-grid{
         width: 90%;   
     }
-    .menu a{
+    #menu{
+        display: none;
+        flex-direction: column; 
+    }
+    #menu a{
         font-size: 16px;
     } 
     .logo{
@@ -239,28 +256,61 @@ button{
     .barras{
         display: inline-block;
     }
-    .menu{
+
+    /* .menu{
         display: none;
         flex-direction: column;
-        width: 250px;
-        height: 250px;
+        width: 80px;
+        height: 200px;
         position: absolute;
-        top: 0;
+        top: 15;
         right: 60px;
+    } */
+
+   #menu{
+        display: none;
+        flex-direction: column;
+        /* position: absolute;   */
+        
+        width: 150px;
+        height: 150px;
+        padding: 30px;
+        top: 300px;
+        right: 100px;
+        background: white;
     }
-    .menu a{
+
+
+    /* .menu a{
         text-align: center;
         padding: 15px;
-    }
+    } */
+
+    #menu a{
+        /* text-align: center;  */
+        padding: 30px;
+        color: black;
+        font-size: 8px;
+        top: 5px;
+    } 
+
     .posiccionamento-header{
         position: relative;
     } 
-    /* .banner{  
-        background-size: 768px 400px;    
-    } */
+   
     .menu-ativo{
         display: flex;
     }   
+
+    .rodape{
+        display: block
+    }
+
+    .lj{
+        display: block;
+        text-align: center;
+        color: white;
+    }
 
     .joistick {
         display: none;
@@ -270,11 +320,9 @@ button{
         display: none;
     }
 
-    /* .logo-rodape{
+    .logo-rodape{
         display: none;
-        width: 150px;
-        height: 150px; 
-    } */
+    } 
 
     
     .siga-nos{
@@ -291,6 +339,7 @@ button{
 
     .links-footer{
         font-size: 14px;
+        flex-direction: row;
     }
 
     .carrosel{
@@ -308,6 +357,10 @@ button{
     }
     .bannerfixoP{
         display: block;
+    }
+    .links-footer{
+        font-size: 14px;
+        flex-direction: column;
     }
 
 }
